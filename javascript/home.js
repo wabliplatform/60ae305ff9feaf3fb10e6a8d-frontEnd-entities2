@@ -10,21 +10,21 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
       const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'projectName']");
       if(insideSubDataElement !== null){
         insideSubDataElement.textContent = data[data.length -i -1].projectName;
-        <selectAdvanceLoopTemplate>
+        
       }
       else if(subDataElements[i].getAttribute('annotationname') === 'projectName'){
         subDataElements[i].textContent = data[data.length -i -1].projectName;
-        <selectAdvanceOuterTemplate>
+        
       }
      } catch (e) { console.log(e) };try { 
       const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'projectDesc']");
       if(insideSubDataElement !== null){
         insideSubDataElement.textContent = data[data.length -i -1].projectDesc;
-        <selectAdvanceLoopTemplate>
+        
       }
       else if(subDataElements[i].getAttribute('annotationname') === 'projectDesc'){
         subDataElements[i].textContent = data[data.length -i -1].projectDesc;
-        <selectAdvanceOuterTemplate>
+        
       }
      } catch (e) { console.log(e) };
         subDataElements[i].addEventListener('click',() => {{ location.href= '/UpdateProject/'+data[data.length -i -1]._id+'';}} )
@@ -39,24 +39,24 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
       const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'wpName']");
       if(insideSubDataElement !== null){
         insideSubDataElement.textContent = data[data.length -i -1].wpName;
-        <selectAdvanceLoopTemplate>
+        
       }
       else if(subDataElements[i].getAttribute('annotationname') === 'wpName'){
         subDataElements[i].textContent = data[data.length -i -1].wpName;
-        <selectAdvanceOuterTemplate>
+        
       }
      } catch (e) { console.log(e) };try { 
       const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'wpDesc']");
       if(insideSubDataElement !== null){
         insideSubDataElement.textContent = data[data.length -i -1].wpDesc;
-        <selectAdvanceLoopTemplate>
+        
       }
       else if(subDataElements[i].getAttribute('annotationname') === 'wpDesc'){
         subDataElements[i].textContent = data[data.length -i -1].wpDesc;
-        <selectAdvanceOuterTemplate>
+        
       }
      } catch (e) { console.log(e) };
-        <insideForLoopTemplate>
+        
       }
     });
     

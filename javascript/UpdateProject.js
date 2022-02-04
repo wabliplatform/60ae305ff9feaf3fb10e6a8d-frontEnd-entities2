@@ -19,7 +19,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
         subDataElements[i].value=data[data.length -i -1]._id;
       }
      } catch (e) { console.log(e) };
-        <insideForLoopTemplate>
+        
       }
     });
     
