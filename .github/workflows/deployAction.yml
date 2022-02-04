@@ -1,0 +1,19 @@
+name: deployment-on-wabli-server
+'on':
+  repository_dispatch:
+    types:
+      - deploy
+jobs:
+  Deploy-the-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.WABLI_SERVER_SSH_HOST }}
+          username: ${{ secrets.WABLI_SERVER_SSH_USERNAME }}
+          password: ${{ secrets.WABLI_SERVER_SSH_PASSWORD }}
+          port: ${{ secrets.WABLI_SERVER_SSH_PORT }}
+          script: >-
+            ./wabli-applications/deploy.sh -b main -d laughing-invention -r
+            https://github.com/wabliplatform/60ae305ff9feaf3fb10e6a8d-frontEnd-entities2.git
+            -f 60ae305ff9feaf3fb10e6a8d-frontEnd-entities2 -p 3100
